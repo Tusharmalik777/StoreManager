@@ -20,15 +20,12 @@ public class Stock {
         this.amountAvailable = amountAvailable;
     }
 
-    public String getProductId() {
-        return productId;
-    }
+    // Getters
+    public String getProductId() { return productId; }
+    public String getSku() { return sku; }
+    public int getAmountAvailable() { return amountAvailable; }
 
-    public String getSku() {
-        return sku;
-    }
-
-    public int getAmountAvailable() {
-        return amountAvailable;
-    }
+    // Setters
+    public void setSku(String sku) { this.sku = sku; }
+    public void setAmountAvailable(int amountAvailable) { this.amountAvailable = amountAvailable; }
 }
