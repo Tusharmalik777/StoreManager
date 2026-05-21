@@ -3,9 +3,9 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>uk.co.danielbryant.djshopping</groupId>
+    <groupId>com.shopfront</groupId>
     <artifactId>shopfront</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>${revision}</version>
     <packaging>jar</packaging>
 
     <name>shopfront</name>
@@ -20,6 +20,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.8</java.version>
+        <revision>1.0.0-SNAPSHOT</revision>
     </properties>
 
     <dependencyManagement>
@@ -73,4 +74,25 @@
         </plugins>
 
     </build>
+
+    <distributionManagement>
+        <repository>
+            <id>release-repo</id>
+            <url>http://3.216.159.179:8081/artifactory/shopfront-libs-release-local</url>
+        </repository>
+
+        <snapshotRepository>
+            <id>snapshot-repo</id>
+            <url>http://3.216.159.179:8081/artifactory/shopfront-libs-snapshot-local</url>
+        </snapshotRepository>
+    </distributionManagement>
+    <repositories>
+        <repository>
+            <id>artifactory-snapshots</id>
+            <url>hhttp://3.216.159.179:8082/artifactory/shopfront-libs-snapshot-local</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
 </project>
